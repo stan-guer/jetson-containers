@@ -3,7 +3,7 @@
 set -e
 source scripts/docker_base.sh
 
-OPENCV_VERSION=${1:-"4.5.0"}
+OPENCV_VERSION=${1:-"4.5.5"}
 
 build_opencv()
 {

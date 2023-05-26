@@ -23,7 +23,7 @@ WORKDIR /opt
 #
 # OpenCV - https://github.com/mdegans/nano_build_opencv/blob/master/build_opencv.sh
 #
-ARG OPENCV_VERSION="4.4.0"
+ARG OPENCV_VERSION="4.5.5"
 
 # install build dependencies
 COPY scripts/opencv_install_deps.sh opencv_install_deps.sh
@@ -67,7 +67,8 @@ RUN git clone --depth 1 --branch ${OPENCV_VERSION} https://github.com/opencv/ope
         -D WITH_CUDNN=ON \
         -D WITH_GSTREAMER=ON \
         -D WITH_LIBV4L=ON \
-        -D WITH_OPENGL=ON \
+        -D WITH_OPENGL=OFF \
+        -D WITH_GTK=ON \
 	   -D WITH_OPENCL=OFF \
 	   -D WITH_IPP=OFF \
         -D WITH_TBB=ON \

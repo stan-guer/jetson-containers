@@ -21,6 +21,8 @@ elif [ $ARCH = "x86_64" ]; then
 	OPENCV_URL="https://nvidia.box.com/shared/static/vfp7krqf5bws752ts58rckpx3nyopmp1.gz"
 	OPENCV_DEB="OpenCV-4.5.0-x86_64.tar.gz"
 fi
+OPENCV_URL="https://nvidia.box.com/shared/static/vfp7krqf5bws752ts58rckpx3nyopmp1.gz"
+OPENCV_DEB="OpenCV-4.5.5-aarch64.tar.gz"
 
 echo "OPENCV_URL=$OPENCV_URL"
 echo "OPENCV_DEB=$OPENCV_DEB"

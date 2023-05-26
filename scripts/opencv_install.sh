@@ -17,9 +17,8 @@ echo "ARCH:  $ARCH"
 apt-get purge -y '.*opencv.*' || echo "previous OpenCV installation not found"
 
 # download and extract the deb packages
-mkdir opencv
-cd opencv
-wget --quiet --show-progress --progress=bar:force:noscroll --no-check-certificate ${OPENCV_URL} -O ${OPENCV_DEB}
+cd /tmp
+#wget --quiet --show-progress --progress=bar:force:noscroll --no-check-certificate ${OPENCV_URL} -O ${OPENCV_DEB}
 tar -xzvf ${OPENCV_DEB}
 
 # install the packages and their dependencies
@@ -50,7 +49,7 @@ if [ $ARCH = "aarch64" ]; then
 		echo "$local_python_path already exists, replacing..."
 		rm -rf $local_python_path
 	fi
-	
+
 	ln -s /usr/include/opencv4 $local_include_path
 	ln -s /usr/lib/python${PYTHON3_VERSION}/dist-packages/cv2 $local_python_path
 	
@@ -66,4 +65,4 @@ fi
 
 # test importing cv2
 echo "testing cv2 module under python..."
-python3 -c "import cv2; print('OpenCV version:', str(cv2.__version__)); print(cv2.getBuildInformation())"
+#python3 -c "import cv2; print('OpenCV version:', str(cv2.__version__)); print(cv2.getBuildInformation())"

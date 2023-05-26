@@ -26,6 +26,7 @@ apt-get install -y --no-install-recommends \
         libgstreamer-plugins-good1.0-dev \
         libgstreamer1.0-dev \
         libgtk-3-dev \
+	libgtk3.0-cil-dev \
         libjpeg-dev \
         libjpeg8-dev \
         libjpeg-turbo8-dev \

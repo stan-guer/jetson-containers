@@ -86,8 +86,9 @@ RUN python3 -m pip install -U \
 # install OpenCV (with CUDA)
 #
 ARG OPENCV_URL=https://nvidia.box.com/shared/static/5v89u6g5rb62fpz4lh0rz531ajo2t5ef.gz
-ARG OPENCV_DEB=OpenCV-4.5.0-aarch64.tar.gz
+ARG OPENCV_DEB=OpenCV-4.5.5-aarch64.tar.gz
 
+COPY packages/OpenCV-4.5.5-aarch64.tar.gz /tmp/OpenCV-4.5.5-aarch64.tar.gz
 COPY scripts/opencv_install.sh /tmp/opencv_install.sh
 RUN cd /tmp && ./opencv_install.sh ${OPENCV_URL} ${OPENCV_DEB}
     

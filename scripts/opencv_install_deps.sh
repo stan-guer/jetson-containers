@@ -7,6 +7,7 @@ ARCH=$(uname -i)
 echo "ARCH:  $ARCH"
 	   
 apt-get update
+apt-get install -y --no-install-recommends mono-runtime
 apt-get install -y --no-install-recommends \
         build-essential \
 	   gfortran \
